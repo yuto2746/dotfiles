@@ -1,4 +1,4 @@
-DOT_FILES=(.bash_profile .zshrc .zshprofile .zpreztorc)
+DOT_FILES=(.bash_profile .zshrc .vimrc)
 
 for file in ${DOT_FILES[@]}
 do 
