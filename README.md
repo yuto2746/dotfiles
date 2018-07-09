@@ -1,8 +1,3 @@
----
-title: dotfiles
-tags: Shell
----
-
 .(ドット)から始まる設定ファイルを管理
 
 # Bash の設定ファイル
