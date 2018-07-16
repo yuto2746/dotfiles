@@ -1,0 +1,1 @@
+/Users/MurakamiYuto/.zprezto/runcoms/zshenv
