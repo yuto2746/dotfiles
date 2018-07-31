@@ -10,9 +10,14 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# アクセスポイントの名前が Amaterasu であれば、プロキシの設定をする
+# アクセスポイントの名前が Amaterasu か 1zanami であれば、プロキシの設定をする
 appname=Amaterasu
+appname2=1zanami
 if [ "`networksetup -getairportnetwork  en0  | awk '{print $4}'`" = "$appname" ]; then
+  scselect Lab
+  export http_proxy="http://proxy.cc.kindai.ac.jp:8080"
+  export https_proxy="http://proxy.cc.kindai.ac.jp:8080"
+elif [ "`networksetup -getairportnetwork  en0  | awk '{print $4}'`" = "$appname2" ]; then
   scselect Lab
   export http_proxy="http://proxy.cc.kindai.ac.jp:8080"
   export https_proxy="http://proxy.cc.kindai.ac.jp:8080"
